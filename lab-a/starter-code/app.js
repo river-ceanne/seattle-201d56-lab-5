@@ -52,7 +52,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+  let sum = a + b + c;
+  let product = a * b * c;
+  var array = [sum,product, a + ' and ' + b + ' and ' + c + ' sum to ' + sum + '.'
+    ,'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + product + '.'];
+  return array;
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
