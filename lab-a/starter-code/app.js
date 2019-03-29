@@ -83,7 +83,7 @@ function sumArray(sumArr) { //eslint-disable-line
   for(let i = 0; i < sumArr.length ; i++){
     sumtempA = sum(sumArr[i],total);
     total = sumtempA[0];
-    console.log(total);
+    //console.log(total);
   }
 
   let string = '';
@@ -95,7 +95,7 @@ function sumArray(sumArr) { //eslint-disable-line
   }
 
   string += ' was passed in as an array of numbers, and ' + total + ' is their sum.';
-  console.log(string);
+  //console.log(string);
 
   var returnArr = [total,string];
   return returnArr;
@@ -119,6 +119,27 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
+  let multTempA = [];
+  let product = 1;
+  for(let i = 0; i < multArr.length ; i++){
+    multTempA = multiply(multArr[i],product);
+    product = multTempA[0];
+    //console.log(product);
+  }
+
+  let string = 'The numbers ';
+  for(let i = 0; i < multArr.length; i++){
+    string += multArr[i];
+    if(i < multArr.length - 1){
+      string += ',';
+    }
+  }
+
+  string += ' have a product of ' + product + '.';
+  //console.log(string);
+
+  var returnArr = [product,string];
+  return returnArr;
 
 }
 
@@ -147,7 +168,7 @@ Test this function by hand in the console to get it working, and when you think 
 var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+ 
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
