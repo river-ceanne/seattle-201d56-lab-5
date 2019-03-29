@@ -168,7 +168,28 @@ Test this function by hand in the console to get it working, and when you think 
 var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
- 
+  let multTempA = [];
+  let product = 1;
+  for(let i = 0; i < dynamicArray.length ; i++){
+    multTempA = multiply(dynamicArray[i],product);
+    product = multTempA[0];
+    //console.log(product);
+  }
+
+  let string = 'The numbers ';
+  for(let i = 0; i < dynamicArray.length; i++){
+    string += dynamicArray[i];
+    if(i < dynamicArray.length - 1){
+      string += ',';
+    }
+  }
+
+  string += ' have a product of ' + product + '.';
+  //console.log(string);
+
+  var returnArr = [product,string];
+  return returnArr;
+
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
